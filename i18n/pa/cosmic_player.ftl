@@ -1,0 +1,14 @@
+settings = ਸੈਟਿੰਗਾਂ
+appearance = ਦਿੱਖ
+theme = ਥੀਮ
+match-desktop = ਡੈਸਕਟਾਪ ਨਾਲ ਮਿਲਾਓ
+dark = ਗੂੜ੍ਹਾ
+light = ਫਿੱਕਾ
+quit = ਸਮਾਪਤ
+open-file = ਫ਼ਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ
+file = ਫ਼ਾਇਲ
+open-folder = ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ
+close-file = ਫ਼ਾਇਲ ਨੂੰ ਬੰਦ ਕਰੋ
+album = ਐਲਬਮ: { $album }
+audio = ਆਡੀਓ
+off = ਬੰਦ
