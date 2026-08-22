@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use cosmic::widget::RcElementWrapper;
-use cosmic::widget::menu::key_bind::KeyBind;
-use cosmic::widget::menu::{self, ItemHeight, ItemWidth, MenuBar};
-use cosmic::{Element, theme};
+use lingmo::widget::RcElementWrapper;
+use lingmo::widget::menu::key_bind::KeyBind;
+use lingmo::widget::menu::{self, ItemHeight, ItemWidth, MenuBar};
+use lingmo::{Element, theme};
 use std::collections::HashMap;
 use std::path::PathBuf;
 

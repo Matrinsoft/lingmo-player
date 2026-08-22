@@ -1,4 +1,4 @@
-﻿// Copyright 2024 System76 <info@system76.com>
+// Copyright 2024 System76 <info@system76.com>
 // SPDX-License-Identifier: GPL-3.0-only
 
 use std::path::PathBuf;
@@ -143,7 +143,7 @@ pub fn print_help() -> ! {
 System76 <info@system76.com>
 
 Designed for the COSMIC鈩?desktop environment, cosmic-player is a
-libcosmic-based multimedia player for music and videos.
+liblingmo-based multimedia player for music and videos.
 
 Project home page: https://github.com/Matrinsoft/lingmo-player
 

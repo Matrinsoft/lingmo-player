@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use cosmic::widget;
+use lingmo::widget;
 use std::cmp::Ordering;
 use std::path::{Path, PathBuf};
 use std::{fs, io};

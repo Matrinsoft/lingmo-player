@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use cosmic::cosmic_config::cosmic_config_derive::CosmicConfigEntry;
-use cosmic::cosmic_config::{self, CosmicConfigEntry};
-use cosmic::theme;
+use lingmo::cosmic_config::cosmic_config_derive::CosmicConfigEntry;
+use lingmo::cosmic_config::{self, CosmicConfigEntry};
+use lingmo::theme;
 use serde::{Deserialize, Serialize};
 use std::collections::VecDeque;
 use std::path::PathBuf;
