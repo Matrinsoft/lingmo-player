@@ -1,8 +1,8 @@
 use iced_video_player::gst::prelude::*;
 use iced_video_player::{Video, gst, gst_app, gst_pbutils};
 
-use lingmo::action;
-use lingmo::app::Task;
+use cosmic::action;
+use cosmic::app::Task;
 
 #[derive(Debug, Default)]
 pub struct VideoSettings {
@@ -12,7 +12,7 @@ pub struct VideoSettings {
 pub fn new_video(
     url: &url::Url,
     settings: VideoSettings,
-) -> Result<Video, lingmo::Task<lingmo::Action<super::Message>>> {
+) -> Result<Video, cosmic::Task<cosmic::Action<super::Message>>> {
     //TODO: this code came from iced_video_player::Video::new and has been modified to stop the pipeline on error
     //TODO: remove unwraps and enable playback of files with only audio.
     gst::init().unwrap();

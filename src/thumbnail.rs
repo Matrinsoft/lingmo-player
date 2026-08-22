@@ -33,7 +33,7 @@ pub fn main(
         };
         // TODO: do not require clone of pixels data
         match &thumbnails[0] {
-            lingmo::widget::image::Handle::Rgba {
+            cosmic::widget::image::Handle::Rgba {
                 id: _,
                 width,
                 height,

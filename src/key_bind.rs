@@ -1,10 +1,10 @@
-use lingmo::iced::keyboard::Key;
-use lingmo::iced::keyboard::key::Named;
+use cosmic::iced::keyboard::Key;
+use cosmic::iced::keyboard::key::Named;
 use std::collections::HashMap;
 
 use crate::Action;
 
-pub use lingmo::widget::menu::key_bind::{KeyBind, Modifier};
+pub use cosmic::widget::menu::key_bind::{KeyBind, Modifier};
 
 //TODO: load from config
 pub fn key_binds() -> HashMap<KeyBind, Action> {

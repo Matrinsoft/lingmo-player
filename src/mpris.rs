@@ -1,5 +1,5 @@
-use lingmo::iced::futures::{self, SinkExt, Stream};
-use lingmo::iced::{Subscription, stream};
+use cosmic::iced::futures::{self, SinkExt, Stream};
+use cosmic::iced::{Subscription, stream};
 use mpris_server::zbus::{Result, fdo};
 use mpris_server::{
     LoopStatus, Metadata, PlaybackRate, PlaybackStatus, PlayerInterface, Property, RootInterface,

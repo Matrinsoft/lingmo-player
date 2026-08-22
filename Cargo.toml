@@ -63,12 +63,12 @@ debug = true
 # iced_video_player = { path = "../iced_video_player" }
 
 # [patch.'https://github.com/Matrinsoft/liblingmo']
-# liblingmo = { path = "../libcosmic" }
+# libcosmic = { path = "../libcosmic" }
 # cosmic-config = { path = "../libcosmic/cosmic-config" }
 # cosmic-theme = { path = "../libcosmic/cosmic-theme" }
-# liblingmo = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
-# cosmic-config = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
-# cosmic-theme = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
-# iced_core = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
-# iced_wgpu = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
-# iced_renderer = { git = "https://github.com/Matrinsoft/liblingmo//", branch = "theme-v2" }
+# libcosmic = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }
+# cosmic-config = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }
+# cosmic-theme = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }
+# iced_core = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }
+# iced_wgpu = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }
+# iced_renderer = { git = "https://github.com/Matrinsoft/libcosmic//", branch = "theme-v2" }

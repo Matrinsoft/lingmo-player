@@ -1,20 +1,20 @@
 // Copyright 2023 System76 <info@system76.com>
 // SPDX-License-Identifier: GPL-3.0-only
 
-use lingmo::app::{Core, Settings, Task};
-use lingmo::command::set_theme;
-use lingmo::cosmic_config::{self, CosmicConfigEntry};
-use lingmo::iced::event::{self, Event};
-use lingmo::iced::keyboard::key::Physical;
-use lingmo::iced::keyboard::{Event as KeyEvent, Key, Modifiers};
-use lingmo::iced::mouse::{Event as MouseEvent, ScrollDelta};
-use lingmo::iced::window::{self, set_mode};
-use lingmo::iced::{
+use cosmic::app::{Core, Settings, Task};
+use cosmic::command::set_theme;
+use cosmic::cosmic_config::{self, CosmicConfigEntry};
+use cosmic::iced::event::{self, Event};
+use cosmic::iced::keyboard::key::Physical;
+use cosmic::iced::keyboard::{Event as KeyEvent, Key, Modifiers};
+use cosmic::iced::mouse::{Event as MouseEvent, ScrollDelta};
+use cosmic::iced::window::{self, set_mode};
+use cosmic::iced::{
     Alignment, Background, Border, Color, ContentFit, Length, Limits, Subscription,
 };
-use lingmo::widget::menu::action::MenuAction;
-use lingmo::widget::{self, Slider, nav_bar, segmented_button};
-use lingmo::{Application, ApplicationExt, Element, action, cosmic_theme, executor, font, theme};
+use cosmic::widget::menu::action::MenuAction;
+use cosmic::widget::{self, Slider, nav_bar, segmented_button};
+use cosmic::{Application, ApplicationExt, Element, action, cosmic_theme, executor, font, theme};
 use iced_video_player::gst::prelude::*;
 use iced_video_player::{Video, VideoPlayer, gst, gst_pbutils};
 use std::any::TypeId;
@@ -163,7 +163,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         url_opt: args.url_opt,
         urls: args.urls,
     };
-    lingmo::app::run::<App>(settings, flags)?;
+    cosmic::app::run::<App>(settings, flags)?;
 
     Ok(())
 }
@@ -868,12 +868,12 @@ impl App {
     }
 }
 
-/// Implement [`lingmo::Application`] to integrate with COSMIC.
+/// Implement [`cosmic::Application`] to integrate with COSMIC.
 impl Application for App {
     /// Default async executor to use with the app.
     type Executor = executor::Default;
 
-    /// Argument received [`lingmo::Application::new`].
+    /// Argument received [`cosmic::Application::new`].
     type Flags = Flags;
 
     /// Message type specific to our [`App`].
@@ -949,10 +949,10 @@ impl Application for App {
             .and_then(|url| url.to_file_path().ok());
         let command = match (app.flags.urls.take(), maybe_path) {
             (Some(urls), _) => {
-                lingmo::task::message(lingmo::action::app(Message::MultipleLoad(urls)))
+                cosmic::task::message(cosmic::action::app(Message::MultipleLoad(urls)))
             }
             (None, Some(path)) if path.is_dir() => {
-                lingmo::task::message(lingmo::action::app(Message::FolderLoad(path)))
+                cosmic::task::message(cosmic::action::app(Message::FolderLoad(path)))
             }
             _ => app.load(),
         };
@@ -1068,7 +1068,7 @@ impl Application for App {
                 #[cfg(feature = "xdg-portal")]
                 return Task::perform(
                     async move {
-                        let dialog = lingmo::dialog::file_chooser::open::Dialog::new()
+                        let dialog = cosmic::dialog::file_chooser::open::Dialog::new()
                             .title(fl!("open-media"));
                         match dialog.open_file().await {
                             Ok(response) => {
@@ -1132,7 +1132,7 @@ impl Application for App {
                 #[cfg(feature = "xdg-portal")]
                 return Task::perform(
                     async move {
-                        let dialog = lingmo::dialog::file_chooser::open::Dialog::new()
+                        let dialog = cosmic::dialog::file_chooser::open::Dialog::new()
                             .title(fl!("open-media-folder"));
                         match dialog.open_folder().await {
                             Ok(response) => {
@@ -1705,7 +1705,7 @@ impl Application for App {
             .on_new_frame(Message::NewFrame)
             .width(Length::Fill)
             .height(Length::Fill)
-            .id(lingmo::widget::Id::new("video-player".to_string()))
+            .id(cosmic::widget::Id::new("video-player".to_string()))
             .into();
 
         let mut background_color = Color::BLACK;
@@ -2158,7 +2158,7 @@ impl Application for App {
             ((!v.eos() && !v.paused()) || self.ab_repeat.is_some()) && !v.has_video()
         }) {
             subscriptions.push(
-                lingmo::iced::time::every(Duration::from_millis(64)).map(|_| Message::NewFrame),
+                cosmic::iced::time::every(Duration::from_millis(64)).map(|_| Message::NewFrame),
             );
         }
 
