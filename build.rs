@@ -3,7 +3,7 @@ use std::{env, fs, path::PathBuf};
 use xdgen::{App, Context, FluentString};
 
 fn main() {
-    EmitBuilder::builder().git_sha(true).emit().unwrap();
+    let _ = EmitBuilder::builder().git_sha(true).emit();
 
     let id = "com.system76.CosmicPlayer";
     let ctx = Context::new("i18n", env::var("CARGO_PKG_NAME").unwrap()).unwrap();
