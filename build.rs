@@ -5,7 +5,7 @@ use xdgen::{App, Context, FluentString};
 fn main() {
     let _ = EmitBuilder::builder().git_sha(true).emit();
 
-    let id = "com.system76.CosmicPlayer";
+    let id = "com.lingmoos.LingmoPlayer";
     let ctx = Context::new("i18n", env::var("CARGO_PKG_NAME").unwrap()).unwrap();
     let app = App::new(FluentString("xdg-name"))
         .comment(FluentString("xdg-comment"))

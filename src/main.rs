@@ -880,7 +880,7 @@ impl Application for App {
     type Message = Message;
 
     /// The unique application ID to supply to the window manager.
-    const APP_ID: &'static str = "com.system76.CosmicPlayer";
+    const APP_ID: &'static str = "com.lingmoos.LingmoPlayer";
 
     fn core(&self) -> &Core {
         &self.core
