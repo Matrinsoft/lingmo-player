@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component type="desktop-application">
+  <id>com.lingmoos.LingmoPlayer</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  <project_group>Lingmo</project_group>
+  <developer_name>Matrinsoft</developer_name>
+  <update_contact>jeremy@system76.com</update_contact>
+  <url type="homepage">https://github.com/Matrinsoft/lingmo-player</url>
+  <url type="bugtracker">https://github.com/Matrinsoft/lingmo-player</url>
+  <name>Lingmo Media Player</name>
+  <summary>Media player for the Lingmo desktop</summary>
+  <description>
+    <p>Media player for the Lingmo desktop</p>
+    <p xml:lang="ar">مشغّل وسائط لسطح مكتب Lingmo</p>
+    <p xml:lang="cs">Přehrávač médií pro pracovní prostředí Lingmo</p>
+    <p xml:lang="hu">Médialejátszó a Lingmo asztali környezethez</p>
+    <p
+            xml:lang="pl"
+        >Odtwarzacz Multimediów dla środowiska graficznego Lingmo</p>
+    <p xml:lang="pt_BR">Reprodutor de mídia do desktop Lingmo</p>
+    <p xml:lang="pt">Reprodutor de mídia do desktop Lingmo</p>
+    <p xml:lang="sk">Prehrávač médií pre pracovné prostredie Lingmo</p>
+    <p xml:lang="it">Lettore multimediale di Lingmo</p>
+    <p xml:lang="es">Reproductor de medios para el escritorio Lingmo</p>
+    <p xml:lang="sv">Mediaspelare för skrivbordsmiljön Lingmo</p>
+  </description>
+  <keywords>
+    <keyword>Audio</keyword>
+    <keyword>Film</keyword>
+    <keyword>Movie</keyword>
+    <keyword>Music</keyword>
+    <keyword>Sound</keyword>
+    <keyword>Video</keyword>
+  </keywords>
+  <launchable type="desktop-id">com.lingmoos.LingmoPlayer.desktop</launchable>
+  <icon
+        type="remote"
+        height="256"
+        width="256"
+    >https://raw.githubusercontent.com/Matrinsoft/lingmo-player/master/res/icons/hicolor/256x256/apps/com.lingmoos.LingmoPlayer.svg</icon>
+  <provides>
+    <id>com.lingmoos.LingmoApplication</id>
+    <binaries>
+      <binary>lingmo-player</binary>
+    </binaries>
+  </provides>
+</component>
